@@ -107,3 +107,10 @@ body {
   transform: translateY(-40%);
   color: var(--color-bg-claro);
 }
+
+/* PRODUCTOS */
+.productos-main {
+  width: 100%;
+  min-height: 50vh;
+  background-color: var(--color-bg-claro);
+}
