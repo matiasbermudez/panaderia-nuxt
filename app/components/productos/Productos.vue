@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import {productos} from '../../utils/constants.ts'
 import CardProductos from './CardProductos.vue';
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
+
+const {data: productos} = await useFetch('/api/productos');
+
 
 </script>
 
@@ -39,6 +41,8 @@ import 'vueperslides/dist/vueperslides.css'
             </div>
         </template>
       </VueperSlide>
+      
     </VueperSlides>
+     
   </div>
 </template>

@@ -1,7 +1,11 @@
+<script setup lang="ts">
+
+
+</script>
 <template>
   <div>
-    <Hero />
-    <Productos/>
-    <FooterComp />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
