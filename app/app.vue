@@ -2,6 +2,6 @@
   <div>
     <Hero />
     <Productos/>
-    <h1 class="tituloh1">HOLA Mundo</h1>
+    <FooterComp />
   </div>
 </template>

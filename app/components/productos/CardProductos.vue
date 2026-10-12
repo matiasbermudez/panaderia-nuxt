@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import BotonAgregarProd from './BotonAgregarProd.vue';
+
 interface ProdCard {
     imagen : string,
     id : number,
@@ -10,12 +12,31 @@ interface ProdCard {
 const producto = defineProps<ProdCard>()
     
 </script>
+
 <template>
-    <article class="productos-card">
-        <img :src="producto.imagen" :alt="producto.nombre" />
-        <h3>{{ producto.nombre }}</h3>
-        <p>{{ producto.descripcion }}</p>
-        <span>{{ producto.precio }}</span>
-    </article>
+  <article class="w-full min-w-0  rounded-xl border border-gray-200 bg-white m-2">
+    <img
+      :src="imagen"
+      :alt="nombre"
+      class="h-48 w-full object-cover"
+    />
+
+    <div class="p-4">
+      <h3 class="text-lg font-semibold">
+        {{ nombre }}
+      </h3>
+
+      <p class="mt-2 text-sm text-gray-600">
+        {{ descripcion }}
+      </p>
+
+      <p class="my-3 font-medium">
+       $  {{ precio }}
+      </p>
+
+      <BotonAgregarProd class=" w-full "/>
+    </div>
+  </article>
 </template>
+
 

@@ -1,14 +1,44 @@
 <script setup lang="ts">
 import {productos} from '../../utils/constants.ts'
 import CardProductos from './CardProductos.vue';
-</script>
-<template>
-    <div class="productos-main">
-        <ul>
-            <li v-for="producto in productos">
-                <CardProductos v-bind="producto" />
-            </li>
-        </ul>
-    </div>
-</template>
+import { VueperSlides, VueperSlide } from 'vueperslides'
+import 'vueperslides/dist/vueperslides.css'
 
+</script>
+
+<template>
+  <div class="productos-main overflow-hidden pb-8 ">
+    <VueperSlides
+       :visible-slides="5"
+  :gap="0"
+  :arrows="true"
+  :bullets="true"
+  :infinite="true"
+  autoplay
+  :autoplay-timeout="3000"
+  :pause-on-hover="true"
+      :fixed-height="'440px'"
+      :breakpoints="{
+        768: {
+          visibleSlides: 2,
+          slideRatio: 1 / 1.3
+        },
+        500: {
+          visibleSlides: 1,
+          slideRatio: 1 / 1.3
+        }
+      }"
+    >
+      <VueperSlide
+        v-for="producto in productos"
+        :key="producto.id"
+      >
+        <template #content>
+            <div class="mx-auto w-full max-w-[20rem]">
+                <CardProductos v-bind="producto" />
+            </div>
+        </template>
+      </VueperSlide>
+    </VueperSlides>
+  </div>
+</template>
