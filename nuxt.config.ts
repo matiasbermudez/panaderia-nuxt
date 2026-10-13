@@ -21,4 +21,7 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+   runtimeConfig: {
+    sessionSecret: process.env.NUXT_SESSION_SECRET || '',
+  }
 })

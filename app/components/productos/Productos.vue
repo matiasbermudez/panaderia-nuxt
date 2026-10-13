@@ -3,7 +3,7 @@ import CardProductos from './CardProductos.vue';
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
 
-const {data: productos} = await useFetch('/api/productos');
+const {data: productos} = await useFetch('/api/productos/productos');
 
 
 </script>
