@@ -1,12 +1,14 @@
 <script setup lang="ts">
+
 import { navBarLinks } from "~/utils/constants"
 import BotonCarrito from './BotonCarrito.vue';
-  console.log(navBarLinks)
+import BotonLogin from '../BotonLogin.vue';
+
 </script>
 
 
 <template>
-   <Header class="relative flex items-center px-6 py-3  ">
+   <header class="relative flex items-center px-6 py-3  ">
 
         <img src="/logo-header.png" alt="Logo" class="w-[200px] img-header " />
 
@@ -17,7 +19,11 @@ import BotonCarrito from './BotonCarrito.vue';
             </li>
 
         </ul>
-        <BotonCarrito class="absolute right-0 -translate-x-1/3"/>
-   </Header>
+        <div class="absolute right-0 -translate-x-1/3 flex gap-4">
+            <BotonCarrito/>
+            <BotonLogin/>
+        </div>
+        
+   </header>
 </template>
 

@@ -60,4 +60,4 @@ const payload = `${role}:${expires}`
   return timingSafeEqual(actualBuffer, expectedBuffer)
 }
 
-export { COOKIE_NAME }
+export { COOKIE_NAME };

@@ -52,6 +52,12 @@ await $fetch('/api/auth/logout' , {
       >
         Cerrar sesión
       </button>
+      <button
+        class="mt-8 rounded-lg bg-amber-800 px-5 py-3 text-white"
+        @click="navigateTo('/')"
+      >
+        Ir al home
+      </button>
     </div>
   </main>
 </template>

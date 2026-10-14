@@ -34,7 +34,7 @@ const producto = defineProps<ProdCard>()
        $  {{ precio }}
       </p>
 
-      <BotonAgregarProd class=" w-full "/>
+      <BotonAgregarProd class=" w-full " :producto="producto" />
     </div>
   </article>
 </template>

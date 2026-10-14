@@ -1,14 +1,25 @@
 <script setup lang="ts">
-
-    const onClickHeader = () => {
-      console.log("Boton de Agregar productos clickeado");
-    };
-
+const props = defineProps<{
+  producto: {
+    id: number
+    nombre: string
+    precio: number
+    tipo: string
+  }
+}>()
+    
+const {agregarAlCarrito , obtenerCarrito} = useCarrito() 
+const producto = props.producto
+const agregarProducto = () => {
+  console.log(producto)
+  agregarAlCarrito(producto)
+  console.log(obtenerCarrito())
+}
 </script>
 
 
 <template>
-  <button class="flex items-center gap-2 boton-carrito justify-center" @click="onClickHeader ">
+  <button class="flex items-center gap-2 boton-carrito justify-center" @click="agregarProducto() ">
     <img src="/carrito-compras-boton.png" alt="Carrito" class="w-[1rem] h-[1rem] "/>
     <p>Agregar</p>
   </button>

@@ -24,7 +24,9 @@ import BotonVerProd from './BotonVerProd.vue';
             </div>
 
             <BotonVerProd class="mt-4"/>
+            
         </section>
+        
     </div>
 </template>
 
