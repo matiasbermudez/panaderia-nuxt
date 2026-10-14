@@ -114,3 +114,37 @@ body {
   min-height: 50vh;
   background-color: var(--color-bg-claro);
 }
+
+
+.carrito-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 350px;
+  max-width: calc(100vw - 32px);
+  margin-top: 12px;
+
+  background-color: var(--color-bg-claro);
+  border: 1px solid var(--color-texto-secundario);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow-suave);
+  z-index: 1000;
+}
+
+/* Tablets y pantallas pequeñas */
+@media (max-width: 640px) {
+  .carrito-dropdown {
+    width: 320px;
+    padding: 14px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 400px) {
+  .carrito-dropdown {
+    width: calc(100vw - 24px);
+    max-width: 320px;
+    padding: 12px;
+  }
+}

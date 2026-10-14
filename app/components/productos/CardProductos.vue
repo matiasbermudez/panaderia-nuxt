@@ -14,29 +14,37 @@ const producto = defineProps<ProdCard>()
 </script>
 
 <template>
-  <article class="w-full min-w-0  rounded-xl border border-gray-200 bg-white m-2">
-    <img
-      :src="imagen"
-      :alt="nombre"
-      class="h-48 w-full object-cover"
-    />
+  <article
+  class="m-2 flex h-[26rem] w-full min-w-0 flex-col
+         overflow-hidden rounded-xl border border-gray-200 bg-white"
+>
+  <img
+    :src="imagen"
+    :alt="nombre"
+    class="h-48 w-full shrink-0 object-cover"
+  />
 
-    <div class="p-4">
-      <h3 class="text-lg font-semibold">
-        {{ nombre }}
-      </h3>
+  <div class="flex flex-1 flex-col p-4">
+    <h3 class="text-lg font-semibold">
+      {{ nombre }}
+    </h3>
 
-      <p class="mt-2 text-sm text-gray-600">
-        {{ descripcion }}
-      </p>
+    <p class="mt-2 text-sm text-gray-600">
+      {{ descripcion }}
+    </p>
 
+    <div class="mt-auto">
       <p class="my-3 font-medium">
-       $  {{ precio }}
+        $ {{ precio }}
       </p>
 
-      <BotonAgregarProd class=" w-full " :producto="producto" />
+      <BotonAgregarProd
+        class="w-full"
+        :producto="producto"
+      />
     </div>
-  </article>
+  </div>
+</article>
 </template>
 
 

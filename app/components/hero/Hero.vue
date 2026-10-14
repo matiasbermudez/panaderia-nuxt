@@ -8,7 +8,7 @@ import BotonVerProd from './BotonVerProd.vue';
 
 <template>
     <div class="hero">
-        <HeaderHero/>
+        <HeaderHero class="relative "/> 
         <section class="hero__section ">
 
             <h3 class=" text-h3 text-verde-principal font-semibold ">PAN FRESCO, TODOS LOS DIAS</h3>
