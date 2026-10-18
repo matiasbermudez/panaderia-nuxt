@@ -33,6 +33,10 @@ const producto = defineProps<ProdCard>()
       {{ descripcion }}
     </p>
 
+    <p class="mt-2 text-sm text-gray-600">
+      {{ tipo }}
+    </p>
+    
     <div class="mt-auto">
       <p class="my-3 font-medium">
         $ {{ precio }}
