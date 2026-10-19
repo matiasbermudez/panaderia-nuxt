@@ -1,5 +1,4 @@
 <script setup lang="ts">
-    import { F } from 'vue-router/dist/index-D7ja2BKs.js';
 import FooterImgRedes from './FooterImgRedes.vue'
 import FooterLinksRapidos from './FooterLinksRapidos.vue'
 import FooterContacto from './FooterContacto.vue'
@@ -7,7 +6,7 @@ import FooterSubs from './FooterSubs.vue'
 </script>
 
 <template>
-    <footer class="h-[30vh] p-10  ">
+    <footer class="h-[30vh] p-10  mt-10">
         <div class="w-full h-full flex justify-between">
 
             <FooterImgRedes />

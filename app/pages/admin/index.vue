@@ -1,4 +1,5 @@
-
+<script setup lang="ts">
+</script>
 <script setup lang="ts">
 definePageMeta({
   middleware: 'auth',
@@ -58,6 +59,7 @@ await $fetch('/api/auth/logout' , {
       >
         Ir al home
       </button>
+
     </div>
   </main>
 </template>
