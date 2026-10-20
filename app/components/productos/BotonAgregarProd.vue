@@ -13,7 +13,6 @@ const producto = props.producto
 const agregarProducto = () => {
   console.log(producto)
   agregarAlCarrito(producto)
-  console.log(obtenerCarrito())
 }
 </script>
 

@@ -11,6 +11,11 @@
         name : "Nosotros",
         href : "/nosotros"
     }
+    ,
+    {
+        name : "Finalizar",
+        href : "/finalizar"
+    }
 ];
 
 export const productos = [

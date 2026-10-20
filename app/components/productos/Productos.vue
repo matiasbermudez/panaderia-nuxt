@@ -12,13 +12,14 @@ const {data: productos} = await useFetch('/api/productos/productos');
   <div class="productos-main overflow-hidden pb-8 ">
     <VueperSlides
        :visible-slides="5"
-  :gap="0"
-  :arrows="true"
-  :bullets="true"
-  :infinite="true"
-  autoplay
-  :autoplay-timeout="3000"
-  :pause-on-hover="true"
+      :gap="0"
+      :arrows="true"
+      :bullets="true"
+      :infinite="true"
+      autoplay
+      :autoplay-timeout="1000"
+      :pause-on-hover="true"
+      
       :fixed-height="'440px'"
       :breakpoints="{
         768: {
@@ -34,9 +35,10 @@ const {data: productos} = await useFetch('/api/productos/productos');
       <VueperSlide
         v-for="producto in productos"
         :key="producto.id"
+        
       >
         <template #content>
-            <div class="mx-auto w-full max-w-[20rem]">
+            <div class="mx-auto w-full max-w-[20rem] " @mousedown.stop @touchstart.stop>
                 <CardProductos v-bind="producto" />
             </div>
         </template>

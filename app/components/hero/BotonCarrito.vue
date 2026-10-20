@@ -7,7 +7,6 @@ const onClickVerCarrito = () => {
     abierto.value = !abierto.value;  
 };
 const { obtenerCarrito } = useCarrito()
-console.log(obtenerCarrito());
 </script>
 
 <template>
