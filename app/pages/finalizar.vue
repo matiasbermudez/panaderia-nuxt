@@ -2,7 +2,7 @@
 import { computed, onMounted, ref } from 'vue'
 import { gsap } from 'gsap'
 import HeaderHero from '../components/hero/HeaderHero.vue'
-const { obtenerCarrito } = useCarrito()
+const { obtenerCarrito, vaciarCarrito } = useCarrito()
 const cart = ref(obtenerCarrito())
 const total = computed(() => cart.value.reduce((total, item) => total + item.precio * item.cantidad, 0))
 console.log("Finalizar Pedido",cart)
@@ -17,11 +17,12 @@ const finalizarPedido = () => {
 
   mensaje += `%0A*Total: $${cart.value.reduce((total, item) => total + item.precio * item.cantidad, 0)}*`
 
-  // 2. Número de WhatsApp de la tienda (formato internacional, sin +)
-  const numeroTienda = '542257617837' // Reemplaza con el tuyo
+  // 2. Número de WhatsApp 
+  const numeroTienda = '542257617837' 
 
   // 3. Crear el enlace y abrirlo
   const url = `https://wa.me/${numeroTienda}?text=${mensaje}`
+  vaciarCarrito();
   window.open(url, '_blank')
 }
 onMounted(() => {

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
+
 const abierto = ref(false);
 
 const onClickVerCarrito = () => {
@@ -28,6 +29,13 @@ const { obtenerCarrito } = useCarrito()
             <li class="font-bold text-verde-principal">Total: ${{ obtenerCarrito().reduce((total, item) => total + item.precio * item.cantidad, 0) }}</li>
         </ul>
         <p v-if="obtenerCarrito().length === 0">El carrito está vacío</p>
+        <NuxtLink
+              v-if="obtenerCarrito().length"
+              to="/finalizar"
+              class="flex text-center justify-center gap-2 boton-carrito"
+            >
+            Finalizar Pedido
+        </NuxtLink>
     </div>
 
 </template>
